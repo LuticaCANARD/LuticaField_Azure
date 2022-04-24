@@ -1,7 +1,0 @@
-C:\Users\presa\Azure\LuticaField_Azure\bin\Release\net6.0\publish\LuticaField_Azure.exe
-C:\Users\presa\Azure\LuticaField_Azure\bin\Release\net6.0\publish\appsettings.Development.json
-C:\Users\presa\Azure\LuticaField_Azure\bin\Release\net6.0\publish\appsettings.json
-C:\Users\presa\Azure\LuticaField_Azure\bin\Release\net6.0\publish\LuticaField_Azure.dll
-C:\Users\presa\Azure\LuticaField_Azure\bin\Release\net6.0\publish\LuticaField_Azure.deps.json
-C:\Users\presa\Azure\LuticaField_Azure\bin\Release\net6.0\publish\LuticaField_Azure.runtimeconfig.json
-C:\Users\presa\Azure\LuticaField_Azure\bin\Release\net6.0\publish\LuticaField_Azure.pdb

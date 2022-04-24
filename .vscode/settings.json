@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/171b7d31-ef73-48bd-b98e-08d6af46b613/resourceGroups/Lutica/providers/Microsoft.Web/sites/LuticaField",
+    "appService.deploySubpath": "."
+}

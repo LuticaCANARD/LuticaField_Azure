@@ -4,7 +4,12 @@ import adapter from '@sveltejs/adapter-auto';
 const config = {
 	kit: {
 		adapter: adapter()
-	}
+	},
+	"navigationFallback": {
+		"rewrite": "app.html",
+		"exclude": ["/images/*.{png,jpg,gif,ico}", "/*.{css,scss,js}"]
+	  }
+	
 };
 
 export default config;

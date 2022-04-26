@@ -1,0 +1,47 @@
+﻿@page "/profile"
+@inject HttpClient Http
+<PageTitle>profile</PageTitle>
+<h1 style = " text-align: center;">Lutica :CANARD</h1>
+<div style=" text-align: center;">
+	<img src=@imgurl style="width : 50%;heigh :50%;" /><br>
+	<p1 style="text-align: center;">
+		Just geek, I'm glad to meet you ya.
+	</p1>
+</div>
+<h3 style = " text-align: center;"> Project </h3>
+<h4 style = " text-align: center;"> (include doing) </h4>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Date</th>
+			<th>Context</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var works in json_works ){
+		<tr>
+			<td>@works.name</td>
+			<td>@works.date</td>
+			<td>@works.context</td>
+		</tr>}
+	</tbody>
+</table>
+<h4>
+</h4>
+
+
+@code {
+	private string imgurl = $"profile_pic.png";
+	private works[]? json_works = new works[] { };
+	protected override async Task OnInitializedAsync()
+	{
+		json_works = await Http.GetFromJsonAsync<works[]>("works-data/works.json");
+	}
+	private class works
+	{
+		public string? name{ get; set; }
+		public string? date{ get; set; }
+		public string? context{ get; set; }
+	}
+}

@@ -813,3 +813,7 @@ C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.
 C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.0\build-gz\QxnazpSk.gz
 C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.0\build-gz\neaNghUE.gz
 C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.0\build-gz\c0PSGj0L.gz
+C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\bin\Debug\net6.0\wwwroot\_framework\Markdig.dll
+C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\bin\Debug\net6.0\wwwroot\_framework\Markdig.dll.gz
+C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\bin\Debug\net6.0\Markdig.dll
+C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.0\build-gz\o+gWvyZ1.gz

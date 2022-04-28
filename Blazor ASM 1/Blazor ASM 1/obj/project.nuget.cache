@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HLnqqxHvUBWH9qsdZ+IpJ84mkO4nF/aXqyF24mwZskmVozX4OKJK2Mh0ndwgpCJZQI8ykdY9fHxiB6P6zCA1LQ==",
+  "dgSpecHash": "P72rN+sFMogBydElCwhUtlbznx41XHw9Q+TcqRytJ5V7DF8j15R7R4cZOPElcamaKhubLLoRUWuaOoyWIhEm6g==",
   "success": true,
   "projectFilePath": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\Blazor ASM 1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\presa\\.nuget\\packages\\markdig\\0.30.2\\markdig.0.30.2.nupkg.sha512",
     "C:\\Users\\presa\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.4\\microsoft.aspnetcore.authorization.6.0.4.nupkg.sha512",
     "C:\\Users\\presa\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.4\\microsoft.aspnetcore.components.6.0.4.nupkg.sha512",
     "C:\\Users\\presa\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.4\\microsoft.aspnetcore.components.analyzers.6.0.4.nupkg.sha512",

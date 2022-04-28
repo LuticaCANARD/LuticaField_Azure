@@ -9,10 +9,17 @@
       "date": "2022-01-19",
       "context": "Calculator for special rule in my community "
     },
-   {
-      "name": "Arduino - plant",
-      "date": "doing",
-      "context": "."
-    }
+  {
+    "name": "Arduino - plant",
+    "date": "paused",
+    "context": "."
+  },
+  {
+
+    "name": "crypto CX2" ,
+    "date": "in progress",
+    "context" : "game for block-chain"
+
+  }
   ]
 

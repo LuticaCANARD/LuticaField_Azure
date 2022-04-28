@@ -1,0 +1,28 @@
+﻿@page "/view/{Postname}"
+@inject HttpClient Http
+<div>
+	@((MarkupString)context)
+</div>
+
+@code {
+	[Parameter]
+	public string? Postname { get; set; }
+	private string? context{ get; set; } 
+	private string? renderingMD { get; set; }
+	public string paths;
+	protected override async Task OnInitializedAsync()
+	{
+	    paths = $"Posts/" + Postname+".md";
+		renderingMD= await Http.GetStringAsync(paths);
+		var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
+		context = Markdown.ToHtml(renderingMD) ;
+	}
+	public class files
+	{
+		string? name;
+		string? path;
+	}
+	
+
+
+}

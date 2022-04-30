@@ -160,9 +160,10 @@ export x  = "default"//외부에서 x변수를 받는다.
 
 ```
 ----
-9) onmount
+10) onmount
 https://svelte.dev/tutorial/onmount
 ------
-10)
+11)
+
 
 

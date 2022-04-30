@@ -1,0 +1,16 @@
+﻿# SQL 문법
+
+## SELECT 
+```
+SELECT 고를거 FROM table WHERE 조건
+SELECT * FROM function (val1,val2,...) 
+```
+
+## DELETE,UPDATE,INSERT 
+```
+DELETE FROM table WHERE 조건
+UPDATE table SET colum=value WHERE 조건
+INSERT INTO table (col1,col2...) VALUE(val1,val2,..)
+```
+
+## 

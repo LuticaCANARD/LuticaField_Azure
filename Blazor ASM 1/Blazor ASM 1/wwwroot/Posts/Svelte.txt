@@ -1,0 +1,168 @@
+﻿# Svelte 기본
+--------------------------
+    
+## Svelte.Js란?
+- 기존의 Js+Html 에서 나타나는 다양한 구성요소들을 모듈화 하여 관리하기 용이한 component형식으로 구성하여 유지보수와 개발을 용이하게 해주는 도구이다.    
+- React, Vue, (이 사이트의 구성인) Blazor 등의 다양한 Freamworks이 존재하지만, Svelte는 webassembly를 표방하며 빠른 속도와 간결한 문법이 특징이다.  
+    
+## Svlete 시작하기  
+----------------------- 
+https://svelte.dev/repl/    
+에서 다운로드 받아 시작한다. (original Svelte이다.)
+    
+## Svelte kit 시작하기   
+--------------------    
+```
+npm init svelte@next my_portfolio_website // my_portfolio_website은 새 폴더 이름이다.
+cd my_portfolio_website // 새 폴더로 이동한다.
+npm install
+npm run dev
+```
+------------------------------
+# svlete 기본 문법
+------------------------------
+https://svelte.dev/tutorial/    참고
+기본적으로 HTML이지만, svlete에는 도움을 주는 몇가지 문법이 있다.
+1) Js단에서 저장된 변수를 가져오기     
+(이는 assembly처럼 전처리 과정과 같이 해결된다고 생각하면 쉽다.)   
+```
+<script>
+let a   
+</script>
+{a}
+```
+-------
+
+2) 원시 html 
+```
+{@html x}
+```
+-------
+
+3) import 구문
+```
+import X from X.z 
+<X />로 불러오기
+``` 
+-------
+4) 몇가지 구문 (상태등)
+```svelte
+on:click={n} //onclick
+
+$ : double =  x*2 // 종속변수
+$: if (count >= 10) {
+	alert('count is dangerously high!');
+	count = 9;
+} // 상태도 나타낼 수 있다. Jquery와 비슷
+
+export x  = "default"//외부에서 x변수를 받는다.
+
+```
+-------
+5) if , foreach
+```
+(if)
+{#if x > 10}
+	<p>{x} is greater than 10</p>
+{:else if 5 > x}
+	<p>{x} is less than 5</p>
+{:else}
+	<p>{x} is between 5 and 10</p>
+{/if}
+(each)
+<ul>
+	{#each cats as cat}
+		<li><a target="_blank" href="https://www.youtube.com/watch?v={cat.id}">
+			{cat.name}
+		</a></li>
+	{/each}
+</ul>
+
+(each로 key 불러오기)
+	let things = [
+		{ id: 1, name: 'apple' },
+		{ id: 2, name: 'banana' },
+		{ id: 3, name: 'carrot' },
+		{ id: 4, name: 'doughnut' },
+		{ id: 5, name: 'egg' },
+	];
+{#each things as thing (thing.id)}
+	<Thing name={thing.name}/>
+{/each}
+```
+-------
+6) await
+```
+(const res = await fetch(`/tutorial/random-number`);)
+{#await promise}
+	<p>...waiting</p>
+{:then number}
+	<p>The number is {number}</p>
+{:catch error}
+	<p style="color: red">{error.message}</p>
+{/await}
+```
+---------
+7) DOM Event
+```
+<div on:mousemove={handleMousemove}>
+	The mouse position is {m.x} x {m.y}
+</div>
+
+<div on:mousemove="{e => m = { x: e.clientX, y: e.clientY }}">
+	The mouse position is {m.x} x {m.y}
+</div>
+
+
+<button on:click|once={handleClick}>
+	Click me
+</button>
+
+<script>
+	import Inner from './Inner.svelte';
+
+	function handleMessage(event) {
+		alert(event.detail.text);
+	}
+</script>
+
+<Inner on:message={handleMessage}/> // 이벤트 주입이 가능하다!
+
+
+```
+------
+8) bind value 등
+```
+ bind:value={name} // input에 넣을 수 있다.
+
+ 예제
+ <div bind:clientWidth={w} bind:clientHeight={h}>
+	<span style="font-size: {size}px">{text}</span>
+</div>
+```
+-----
+9) canvas
+```
+<style>
+	canvas {
+		width: 100%;
+		height: 100%;
+		background-color: #666;
+		-webkit-mask: url(/svelte-logo-mask.svg) 50% 50% no-repeat;
+		mask: url(/svelte-logo-mask.svg) 50% 50% no-repeat;
+	}
+</style>
+<canvas
+	bind:this={canvas}
+	width={32}
+	height={32}
+></canvas>
+
+```
+----
+9) onmount
+https://svelte.dev/tutorial/onmount
+------
+10)
+
+

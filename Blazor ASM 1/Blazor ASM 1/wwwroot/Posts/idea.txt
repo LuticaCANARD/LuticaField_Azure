@@ -3,9 +3,11 @@
 1. sql접근때 fetch과정을 잊지말자.
 2. obj는 a-> array는 []
 3.
-#발상
+# 발상
 
 1. conversation
 2. work의 통일성
 3. camel , snake case 잘지키기
 4. 
+
+# 

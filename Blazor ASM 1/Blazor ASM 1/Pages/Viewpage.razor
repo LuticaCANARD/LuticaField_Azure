@@ -12,7 +12,7 @@
 	public string paths;
 	protected override async Task OnInitializedAsync()
 	{
-	    paths = $"Posts/" + Postname+".html";
+	    paths = $"Posts/" + Postname+".txt";
 		renderingMD= await Http.GetStringAsync(paths);
 		var pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
 		context = Markdown.ToHtml(renderingMD) ;

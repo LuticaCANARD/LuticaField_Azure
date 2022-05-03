@@ -18,22 +18,24 @@
 				<p1>  @card.showCardType() , Ace! (@card.number)|</p1>
 			}
 		}
-		<br> <p1> your count : @displaySum(Cards_host)</p1>
+		<br> <p1> hosts count : @displaySum(Cards_host)</p1>
 		<hr />
 		@foreach(card card in Cards_player)
 		{
-			if (card.showCardNumber() != 1)
+			if (card.showCardNumber() != 1 &&card.showCardNumber() < 10)
 			{
 				<p1>  @card.showCardType() , @card.showCardNumber() (@card.number)|</p1>
 			}
-			else
+			else if(card.showCardNumber() == 1)
 			{
 				<p1>  @card.showCardType() , Ace! (@card.number)|</p1>
+			}else{
+				<p1>  @card.showCardType() , @upper10(card.showCardNumber()) (@card.number)| </p1>
 			}
 		}
 		<br> <p1> your count : @displaySum(Cards_player)</p1>
 		<hr />
-		@if(!(displaySum(Cards_player)==21)&&getBusted(Cards_player)&&getBusted(Cards_host))
+		@if(!(displaySum(Cards_player)==21)&&getBusted(Cards_player)&&getBusted(Cards_host)&&!ended)
 		{
 			<button @onclick="push_player"> Push! </button>
 			<button @onclick="select_stop">Stop</button>
@@ -44,11 +46,15 @@
 		}
 		else 
 		{
-			if (displaySum(Cards_player)==21||getBusted(Cards_player)&&!getBusted(Cards_host))
+			if (displaySum(Cards_player)==21||(getBusted(Cards_player)&&!getBusted(Cards_host))||(displaySum(Cards_host)<displaySum(Cards_player)&&getBusted(Cards_player)))
 			{
+				if (!getBusted(Cards_host))
+				{
+					<p1> host is bust ! </p1>
+				}
 				<button @onclick="clearCard"> You Win! </button>
 			}
-			else if (!getBusted(Cards_player) && getBusted(Cards_host) )
+			else if (displaySum(Cards_host)==21||(!getBusted(Cards_player) && getBusted(Cards_host))||((displaySum(Cards_host)>displaySum(Cards_player)&&getBusted(Cards_host))))
 			{
 				<button @onclick="clearCard"> You Lose! </button>
 			}
@@ -69,7 +75,10 @@
 </center>
 @code 
 {
-
+	public string upper10(int num) {
+		string[] avs = new string[] { "J", "Q", "K" };
+		return avs[num - 10];
+	}
 	public class card
 	{ 
 		// 12마다 반복, 1다이아, 2클로버 3 하트 4스페이드
@@ -85,6 +94,7 @@
 			return (((this.number) % 12)+1);
 		}
 	};
+	private bool ended=false;
 	private List<card> Cards = new List<card>();
 	private List<card> Cards_host = new List<card>();
 	private List<card> Cards_player = new List<card>();
@@ -95,6 +105,7 @@
 		Cards_player.Clear();
 		Cards.Clear();
 		started = false;
+		ended = false;
 	}
 	protected void select_split()
 	{
@@ -102,7 +113,39 @@
 	}
 	protected void select_stop()
 	{
-		clearCard();
+		while(countCard(Cards_host)<21)
+		{
+			int summary = countCard(Cards_host);
+			if (summary >= countCard(Cards_player))
+			{
+				break;
+			}
+			else
+			{
+				if (summary < 13)
+				{
+					push(true);
+					continue;
+				}
+				else
+				{
+					Random Randoms = new Random();
+					int rndc = Randoms.Next(0, 21 - summary);
+					if (rndc < 3)
+					{
+						break;
+					}
+					else
+					{
+						push(true);
+						continue;
+					}
+				}
+			}
+		}
+		ended = true;
+
+
 	}
 
 	protected void initAndReady()

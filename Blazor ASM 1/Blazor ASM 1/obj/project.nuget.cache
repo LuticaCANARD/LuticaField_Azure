@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zUfVtgOaZhC+GW+eUXN7Ycj606CetYoKXPWxDpCSVk1Sf3k3sYLQcFoZAzOD/hOBHSvJEeKVuK5/3oc124p6jg==",
+  "dgSpecHash": "bAwjMMcsC0k17zuCgWs2Wym5rndLOtU01jzBgQTzAxMpDjVG1GsueXjEdYj3BaEYPy+7imMvE11lTlYdjldylg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\Blazor ASM 1.csproj",
+  "projectFilePath": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\LuticaField.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\presa\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\presa\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",

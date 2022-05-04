@@ -2604,9 +2604,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\Blazor ASM 1.csproj",
-      "projectName": "Blazor ASM 1",
-      "projectPath": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\Blazor ASM 1.csproj",
+      "projectUniqueName": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\LuticaField.csproj",
+      "projectName": "LuticaField",
+      "projectPath": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\LuticaField.csproj",
       "packagesPath": "C:\\Users\\presa\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\obj\\",
       "projectStyle": "PackageReference",

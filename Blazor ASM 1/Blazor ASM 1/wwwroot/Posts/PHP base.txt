@@ -1,0 +1,24 @@
+﻿# PHP 기본
+
+## php란?
+- serverside 언어로, server내에서 처리하고 client로는 보내지 않는 언어이다.
+
+## PHP에서 Js로 교신하는 방법및 과정
+- axios, fetch 가 사용된다.
+- axios는 별도의 라이브러리 설치가 필요하나, post통신등에서 좀 더 편리하다는 장점을 가지고 있어 많이 쓰인다.
+
+### AXIOS 설치방법
+```
+npm install axios
+```
+### Js side AXIOS의 주요명령어
+```
+axios.post( 보낼 곳, {내용}(json 형)).then((반응)=>{함수}).catch((err))
+
+```
+### PHP side의 Axios명령어
+```
+PHP
+
+```
+### 

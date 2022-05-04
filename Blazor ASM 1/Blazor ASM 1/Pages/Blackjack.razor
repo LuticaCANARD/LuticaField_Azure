@@ -50,12 +50,18 @@
 			{
 				if (!getBusted(Cards_host))
 				{
-					<p1> host is bust ! </p1>
+					<p1> host got a bust ! </p1>
+					<br />
 				}
 				<button @onclick="clearCard"> You Win! </button>
 			}
 			else if (displaySum(Cards_host)==21||(!getBusted(Cards_player) && getBusted(Cards_host))||((displaySum(Cards_host)>displaySum(Cards_player)&&getBusted(Cards_host))))
 			{
+				if (!getBusted(Cards_host))
+				{
+					<p1> you got a bust ! </p1>
+					<br />
+				}
 				<button @onclick="clearCard"> You Lose! </button>
 			}
 			else

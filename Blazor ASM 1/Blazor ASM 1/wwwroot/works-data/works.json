@@ -1,4 +1,11 @@
 ﻿ [
+  {
+
+    "name": "This site" ,
+    "date": "while before graduated",
+    "context" : "tech-blog for my memory and study"
+
+  },
     {
       "name": "Lable maker",
       "date": "2021-12-19",
@@ -16,7 +23,7 @@
   },
   {
 
-    "name": "crypto CX2" ,
+    "name": "crypto Conqure" ,
     "date": "in progress",
     "context" : "game for block-chain"
 

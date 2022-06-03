@@ -11,6 +11,7 @@
 
 		<p1>SEX : @sex </p1><br />
 		<p1>직군 : @jikgun</p1><br />
+		<p1>등급 : @star </p1>
 		<p1>
 			@for(int j = 0 ; j < 5 ; j++)
 			{
@@ -32,6 +33,7 @@
 	public List<string> stats_vim = new List<string> { "전투력","생존력","파괴력","기동력","의지","자율배분치" };
 	public bool save = false;
 	public string jikgun = "";
+	public int star = 0;
 	public void makingsex()
 	{
 		Random rand = new Random();
@@ -109,7 +111,8 @@
 	{
 		get_stat = true;
 		makingsex();
-		stats = secondDice(firstDice());
+		star = firstDice();
+		stats = secondDice(star);
 		save = lastDice();
 		jikgun = getJob(thirdDice());
 	}

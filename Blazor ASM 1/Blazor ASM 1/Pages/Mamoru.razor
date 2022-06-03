@@ -4,15 +4,50 @@
 
 
 <center>
+	@if(get_stat==false)
+	{
+		<button @onclick="onside">Stat making</button>
+	}
+	else
+	{
+		<h1> 캐릭터 이름 : </h1><input type="text"/><br/>
 
+		<p1>SEX : @sex </p1><br />
+		<p1>직군 : @jikgun</p1><br />
+		<p1>
+			@for(int j = 0 ; j < 5 ; j++)
+			{
+				<p1> @stats_vim[j] : @stats[j] </p1><br />
+			}
+		</p1>
+		<p1> 추가능력 보유여부 : 
+			@if (save) { <p1> YES </p1> }
+			else{<p1> NO </p1>}</p1><br />
+			<button @onclick = "kill"> 닫기 </button>
+			<button @onclick = "onside"> 다시 굴리기 </button>
+			
+	}
 
 </center>
 @code {
-	public int makingsex()
+	public bool get_stat = false;
+	public string sex = "";
+	public List<int> stats = new List<int> { };
+	public List<string> stats_vim = new List<string> { "전투력","생존력","파괴력","기동력","의지","자율배분치" };
+	public bool save = false;
+	public string jikgun = "";
+	public void makingsex()
 	{
 		Random rand = new Random();
-		int r1 = rand.Next(2) + 1;
-		return r1;
+		int r1 = rand.Next(3) + 1;
+		if (r1 == 1)
+		{
+			sex = "여성"; // 여성
+		}
+		else
+		{
+			sex = "남성"; //남성
+		}
 	}
 
 	public int firstDice()
@@ -46,7 +81,47 @@
 				retu.Add(rand.Next(10) + 1);
 			};
 		}
+		retu[1] += 5;
+		//전투력 생존력 파괴력 기동력 의지 자율배분수치
 		return retu;
 	}
+	public int thirdDice()
+	{
+		Random rand = new Random();
+		return rand.Next(9);
+	}
+	public bool lastDice()
+	{
+		Random rand = new Random();
+		int r1 = rand.Next(6) + 1;
+		if(r1>4)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	public string getJob(int index)
+	{
+		string[] pp = { "직군 1", "직군 2", "직군 3", "직군 4", "직군 5", "직군 6", "직군 7", "직군 8", "직군 9" };
+		return pp[index];
+
+	}
+	public void onside()
+	{
+		get_stat = true;
+		makingsex();
+		stats = secondDice(firstDice());
+		save = lastDice();
+		jikgun = getJob(thirdDice());
+	}
+	public void kill()
+	{
+		get_stat = false;
+
+	}
+
 	//d4+2
 }

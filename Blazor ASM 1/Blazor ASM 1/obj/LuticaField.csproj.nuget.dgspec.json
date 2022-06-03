@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\LuticaField.csproj": {}
+    "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\Luticafield.csproj": {}
   },
   "projects": {
-    "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\LuticaField.csproj": {
+    "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\Luticafield.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\LuticaField.csproj",
-        "projectName": "LuticaField",
-        "projectPath": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\LuticaField.csproj",
+        "projectUniqueName": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\Luticafield.csproj",
+        "projectName": "Luticafield",
+        "projectPath": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\Luticafield.csproj",
         "packagesPath": "C:\\Users\\presa\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\presa\\Azure\\LuticaField_Azure\\Blazor ASM 1\\Blazor ASM 1\\obj\\",
         "projectStyle": "PackageReference",
@@ -50,12 +50,12 @@
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.5, )"
             },
             "MySql.Data": {
               "target": "Package",
@@ -75,7 +75,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.4, 6.0.4]"
+              "version": "[6.0.5, 6.0.5]"
             }
           ],
           "frameworkReferences": {
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

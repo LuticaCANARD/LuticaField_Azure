@@ -1,29 +1,34 @@
 ﻿using MySql.Data.MySqlClient;
-namespace Blazor_ASM_1
+namespace SQLs
 {
-    public class SQLAPILu
+   public class SQLAPILu
     {
-        protected internal string Server="lusever.mysql.database.azure.com";
-        protected internal string UserID = "User";
-        protected internal string Password="{your_password}";
-        protected internal string Database="{your_database}";
-        protected internal MySqlSslMode SslMode =MySqlSslMode.Required;
-        protected internal string SslCa="{path_to_CA_cert}";
 
-        public int SQLexecute(string qurey)
+        public async Task SQLexecute(string qurey)
         {
-            string Serverlogin = "Server:" + Server + ";uid=" + UserID + ";Pwd=" + Password + ";database=" + Database;
+            var builder = new MySqlConnectionStringBuilder
+            {
+                Server = Sqlclass.Server,
+                Database = Sqlclass.Database,
+                UserID = Sqlclass.UserID,
+                Password = Sqlclass.Password,
+                SslMode = MySqlSslMode.Required
+            };
 
             try
             {
-                MySqlConnection conn=new MySqlConnection(Serverlogin);
-                MySqlCommand cmd=conn.CreateCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = qurey;
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                return 0;
+                MySqlConnection conn=new MySqlConnection(builder.ConnectionString);
+                await conn.OpenAsync();
+                using (var command = conn.CreateCommand()) 
+                {
+                    command.CommandText = qurey;
+                    command.CommandText = "DELETE FROM inventory WHERE name = @name;";
+                    command.Parameters.AddWithValue("@name", "orange");
+
+                    int rowCount = await command.ExecuteNonQueryAsync();
+                    Console.WriteLine(String.Format("Number of rows deleted={0}", rowCount));
+                }
+              
             }
             catch (Exception ex)
             {

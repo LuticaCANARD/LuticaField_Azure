@@ -12,7 +12,7 @@ build_property.IncludeAllContentForSelfExtract =
 build_property.RootNamespace = Blazor_ASM_1
 build_property.RootNamespace = Blazor_ASM_1
 build_property.ProjectDir = C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\
-build_property.RazorLangVersion = 6.0
+build_property.RazorLangVersion = 2.1
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1
@@ -50,6 +50,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3BhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -57,11 +65,3 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-ftaf1ltpfw
-
-[C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-b62w7ldix2

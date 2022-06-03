@@ -9,8 +9,8 @@ build_property._SupportedPlatformList = browser
 build_property.EnableSingleFileAnalyzer = 
 build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
-build_property.RootNamespace = LuticaField
-build_property.RootNamespace = LuticaField
+build_property.RootNamespace = Luticafield
+build_property.RootNamespace = Luticafield
 build_property.ProjectDir = C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlicmFyeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/Pages/Mamoru.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFtb3J1LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/Pages/Notices.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWNlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,8 +64,8 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-vtqstfokcy
+build_metadata.AdditionalFiles.CssScope = b-xtl0ci6hh3
 
 [C:/Users/presa/Azure/LuticaField_Azure/Blazor ASM 1/Blazor ASM 1/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-3oyvay485f
+build_metadata.AdditionalFiles.CssScope = b-12fvrq5nd3

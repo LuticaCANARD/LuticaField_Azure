@@ -874,3 +874,5 @@ C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.
 C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.0\build-gz\u66cF+R3.gz
 C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.0\build-gz\0APPc+aH.gz
 C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.0\build-gz\qQvslLbB.gz
+C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.0\Blazor ASM 1.RazorAssemblyInfo.cache
+C:\Users\presa\Azure\LuticaField_Azure\Blazor ASM 1\Blazor ASM 1\obj\Debug\net6.0\Blazor ASM 1.RazorAssemblyInfo.cs

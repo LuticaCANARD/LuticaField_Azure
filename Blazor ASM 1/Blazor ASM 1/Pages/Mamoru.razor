@@ -33,37 +33,41 @@
 			<button @onclick = "onside"> 다시 굴리기 </button>
 			
 	}
+
+	<h2> 계약 크기 : @sizes</h2>
+	<select @bind = "sizes">
+	@foreach(int val in values_for_soi)
+	{
+		<option value = "@val"><p1>@val</p1></option>
+	}
+	</select>
 	<table>
-	<thead>
-		<th>보정 대상</th>
-		<th>보정 수치</th>
-		<th>보정 확정</th>
-	</thead>
-	<tbody>
-		<tr><td><p1>@getJob(0) </p1></td><td><input type="number" @bind = "job_add_1" @bind:event="oninput" class = "input"/></td><td>@job_add_1</td></tr>
-		<tr><td><p1>@getJob(1) </p1></td><td><input type="number" @bind = "job_add_2" @bind:event="oninput" class = "input"/></td><td>@job_add_2</td></tr>
-		<tr><td><p1>@getJob(2) </p1></td><td><input type="number" @bind = "job_add_3" @bind:event="oninput" class = "input"/></td><td>@job_add_3</td></tr>
-		<tr><td><p1>@getJob(3) </p1></td><td><input type="number" @bind = "job_add_4" @bind:event="oninput" class = "input"/></td><td>@job_add_4</td></tr>
-		<tr><td><p1>@getJob(4) </p1></td><td><input type="number" @bind = "job_add_5" @bind:event="oninput" class = "input"/></td><td>@job_add_5</td></tr>
-		<tr><td><p1>@getJob(5) </p1></td><td><input type="number" @bind = "job_add_6" @bind:event="oninput" class = "input"/></td><td>@job_add_6</td></tr>
-		<tr><td><p1>@getJob(6) </p1></td><td><input type="number" @bind = "job_add_7" @bind:event="oninput" class = "input"/></td><td>@job_add_7</td></tr>
-		<tr><td><p1>@getJob(7) </p1></td><td><input type="number" @bind = "job_add_8" @bind:event="oninput" class = "input"/></td><td>@job_add_8</td></tr>
-		<tr><td><p1>@getJob(8) </p1></td><td><input type="number" @bind = "job_add_9" @bind:event="oninput" class = "input"/></td><td>@job_add_9</td></tr>
-	</tbody>
-</table>
+		<thead>
+			<th>보정 대상</th>
+			<th>보정 수치</th>
+			<th>보정 확정</th>
+		</thead>
+		<tbody>
+			<tr><td><p1>@getJob(0) </p1></td><td><input type="number" @bind = "job_add_1" @bind:event="oninput" class = "input"/></td><td>@job_add_1</td></tr>
+			<tr><td><p1>@getJob(1) </p1></td><td><input type="number" @bind = "job_add_2" @bind:event="oninput" class = "input"/></td><td>@job_add_2</td></tr>
+			<tr><td><p1>@getJob(2) </p1></td><td><input type="number" @bind = "job_add_3" @bind:event="oninput" class = "input"/></td><td>@job_add_3</td></tr>
+			<tr><td><p1>@getJob(3) </p1></td><td><input type="number" @bind = "job_add_4" @bind:event="oninput" class = "input"/></td><td>@job_add_4</td></tr>
+			<tr><td><p1>@getJob(4) </p1></td><td><input type="number" @bind = "job_add_5" @bind:event="oninput" class = "input"/></td><td>@job_add_5</td></tr>
+			<tr><td><p1>@getJob(5) </p1></td><td><input type="number" @bind = "job_add_6" @bind:event="oninput" class = "input"/></td><td>@job_add_6</td></tr>
+			<tr><td><p1>@getJob(6) </p1></td><td><input type="number" @bind = "job_add_7" @bind:event="oninput" class = "input"/></td><td>@job_add_7</td></tr>
+			<tr><td><p1>@getJob(7) </p1></td><td><input type="number" @bind = "job_add_8" @bind:event="oninput" class = "input"/></td><td>@job_add_8</td></tr>
+			<tr><td><p1>@getJob(8) </p1></td><td><input type="number" @bind = "job_add_9" @bind:event="oninput" class = "input"/></td><td>@job_add_9</td></tr>
+		</tbody>
+	</table>
+
+
 
 
 @code {
-	public int job_add_1 = 1 ;
-	public int job_add_2 = 1 ;
-	public int job_add_3 = 1 ;
-	public int job_add_4 = 1 ;
-	public int job_add_5 = 1 ;
-	public int job_add_6 = 1 ;
-	public int job_add_7 = 1 ;
-	public int job_add_8 = 1 ;
-	public int job_add_9 = 1 ;
+	public ushort pagement = 0;
+	public int job_add_1 = 1 ;public int job_add_2 = 1 ;public int job_add_3 = 1 ;public int job_add_4 = 1 ;public int job_add_5 = 1 ;public int job_add_6 = 1 ;public int job_add_7 = 1 ;public int job_add_8 = 1 ;public int job_add_9 = 1 ;
 	public int rant = 0;
+	public int max_job = 9;
 	public int debug_1 = 0;
 	public bool get_stat = false;
 	public string sex = "";
@@ -72,6 +76,8 @@
 	public bool save = false;
 	public string jikgun = "";
 	public int star = 0;
+	public int[] values_for_soi = {10000,25000,30000,50000};
+	public int sizes = 25000;
 	public void makingsex()
 	{
 		Random rand = new Random();
@@ -126,14 +132,7 @@
 	{
 		Random rand = new Random();
 		int r1 = rand.Next(6) + 1;
-		if(r1>4)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return r1 > 4;
 	}
 	public string getJob(int index)
 	{
@@ -145,8 +144,26 @@
 	{
 		get_stat = true;
 		makingsex();
-		star = firstDice();
-		stats = secondDice(star);
+		if(sizes ==25000)
+		{
+			star = firstDice();
+			stats = secondDice(star);
+		}
+		else if(sizes == 10000)
+		{
+			star = sizes;
+			stats = statDices(4, 0);
+		}
+		else if(sizes == 30000)
+		{
+			star = sizes;
+			stats = statDices(4, 2);
+		}
+		else if(sizes == 50000)
+		{
+			star = sizes;
+			stats = statDices(6, 2);
+		}
 		save = lastDice();
 		rant = thirdDice();
 		jikgun = getJob(rant);
@@ -185,6 +202,16 @@
 	{
 		get_stat = false;
 
+	}
+	public List<int> statDices(int max, int add)
+	{
+		Random rand = new Random();
+		List<int> retu = new List<int> { };
+		for(int i = 0; i < 6; i++)
+		{
+			retu.Add(rand.Next(max) + 1 + add);
+		};
+		return retu;
 	}
 
 	//d4+2

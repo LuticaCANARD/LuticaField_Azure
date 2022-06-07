@@ -25,6 +25,30 @@
 	}
 	</tbody>
 </table>}
+@if(posts_online==null){}else{
+<table class="table">
+	<thead>
+		
+			<th>연번</th>
+			<th>제목</th>
+			<th>작성일</th>
+		
+	</thead>
+	<tbody>
+	@foreach(var post in posts_online)
+	{
+		
+		<TR>
+			
+			<td>@post.id</td>
+			<td><a href="view/@post.name">@post.name</a></td>
+			<td>@post.time</td>
+			
+		</TR>
+		
+	}
+	</tbody>
+</table>}
 
 @code {
 	public class Post
@@ -32,11 +56,19 @@
 		public int? num { get; set; }
 		public string? title{ get; set; }
 		public string? date { get; set; }
-
+	}
+	public class online_post
+	{
+		public int? id{ get; set; }
+		public string? name{ get; set; }
+		public string? time{ get; set; }
 	}
 	private Post[]? posts;
+	private online_post[]? posts_online;
 
 	protected override async Task OnInitializedAsync(){
 		posts = await http.GetFromJsonAsync<Post[]>("Posts/postlist.json");
+		posts_online = await http.GetFromJsonAsync<online_post[]>("https://luticafn20220607191926.azurewebsites.net/api/getPosts?size=0");
 	}
+
 }

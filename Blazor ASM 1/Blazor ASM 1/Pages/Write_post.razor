@@ -1,0 +1,18 @@
+﻿@page "/write_post"
+<h3>Write_post</h3>
+<form id = "fo_write" action = "https://luticafn20220607191926.azurewebsites.net/api/writePost" onsubmit="window.location.href='';" method="post">
+	<p1>title:</p1> <input type="text" @bind="title" name ="title"/><br />
+	<p1> text :</p1><textarea @bind="text" name ="text"/>
+	<br />
+	입력 암호 : 
+	<input type="password" @bind="code" name = "code" /><br />
+	<input type="submit"/>
+</form>
+
+
+@code {
+	public string title;
+	public string text;
+	public int code;
+
+}

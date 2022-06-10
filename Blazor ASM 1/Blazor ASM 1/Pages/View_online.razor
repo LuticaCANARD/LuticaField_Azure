@@ -1,9 +1,9 @@
 ﻿@page "/online_view/{online_id}"
 @inject HttpClient Http
 
-<h1>@posts_online.title</h1> 작성일 : <p1>(@posts_online.time)</p1>
+<h1>@posts_online.title</h1> 작성일 : <p1>@posts_online.time</p1>
 <br />
-<p1>@posts_online.html</p1>
+<p1>@((MarkupString)@postn)</p1>
 
 
 @code {
@@ -13,7 +13,9 @@
 		public string? time { get; set; }
 		public string? html { get; set; }
 
-	} 
+
+	}
+	public string? postn;
 	Postofonline? posts_online = new Postofonline();
 	[Parameter]
 	public string? online_id { get; set; }
@@ -22,6 +24,7 @@
 		string url = "https://luticafn20220607191926.azurewebsites.net/api/getPostHtml?id="+int.Parse(online_id);
 		Postofonline[] posts_onlines = await Http.GetFromJsonAsync<Postofonline[]>(url);
 		posts_online = posts_onlines[0];
+		postn = Markdown.ToHtml(posts_online.html); 
 
 	}
 }
